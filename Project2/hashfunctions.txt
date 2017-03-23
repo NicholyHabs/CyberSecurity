@@ -1,0 +1,16 @@
+// NGH CMS 495
+// Is it possible to guarantee that the function will always map two input messge m and m' 
+// to distinct hash values? 
+
+
+It is not always possible to ensure that the messages will hash to different values.
+If the m, or message digest, is longer than the n number of bits in the hash funtion 
+there will be a n/m number of hashes that go to the same m. Hash functions only have
+2^n possible hashes, and there is no way to predetermine the length of m. 
+
+
+I'm not sure about the n/m hashes being replicated, since if m > n, then n/m is
+less than 1, which seems to be the opposite of what you want to argue.
+
+You have the right idea, though, that if m > n there must be some m-bit messages
+that map to the same hash output.
